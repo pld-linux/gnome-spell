@@ -16,7 +16,6 @@ BuildRequires:	oaf-devel
 BuildRequires:	pspell-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Gnome Spell is GNOME/Bonobo component for spell checking. In current
