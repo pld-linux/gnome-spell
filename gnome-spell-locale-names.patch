@@ -1,0 +1,12 @@
+diff -urN aa/gnome-spell-1.0.5/configure.in gnome-spell-1.0.5/configure.in
+--- aa/gnome-spell-1.0.5/configure.in	2003-07-30 17:42:57.000000000 +0200
++++ gnome-spell-1.0.5/configure.in	2004-04-07 19:29:34.896663328 +0200
+@@ -35,7 +35,7 @@
+ AM_PROG_LIBTOOL
+ 
+ # Internationalization support
+-ALL_LINGUAS="am az be bg cs da de el es fi fr he hu it ja kn lt lv nl no pl pt pt_BR ru sk sr sr@Latn sv ta tr uk wa vi zh_CN"
++ALL_LINGUAS="am az be bg cs da de el es fi fr he hu it ja kn lt lv nb nl pl pt pt_BR ru sk sr sr@Latn sv ta tr uk wa vi zh_CN"
+ AM_GLIB_GNU_GETTEXT
+ 
+ AC_SUBST(GETTEXT_PACKAGE)
