@@ -1,7 +1,7 @@
 Summary:	Gnome Spell is GNOME/Bonobo component for spell checking
 Name:		gnome-spell
 Version:	0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
