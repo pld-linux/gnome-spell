@@ -1,22 +1,20 @@
 Summary:	Gnome Spell is GNOME/Bonobo component for spell checking
 Summary(pl):	Gnome Spell to element GNOME/Bonobo do kontroli pisowni
 Name:		gnome-spell
-Version:	1.0.4
+Version:	1.0.5
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-spell/1.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	d991c1791fdc58d38d514752daf92330
+# Source0-md5:	ba4dd33cb150b670756e456066bd7434
 BuildRequires:	ORBit2-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	pspell-devel
-BuildRequires:	libgnomeui-devel
-BuildRequires:	libbonoboui-devel
-BuildRequires:	libglade2-devel
-BuildRequires:	libtool
-BuildRequires:	libbonobo-devel
 BuildRequires:	bonobo-activation-devel
+BuildRequires:	libglade2-devel
+BuildRequires:	libgnomeui-devel
+BuildRequires:	libtool
+BuildRequires:	pspell-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -68,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}-%{version}.lang
 %defattr(644,root,root,755)
+%dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/libgnome-spell-component*.*.so
 %{_libdir}/bonobo/servers/*
 %{_datadir}/control-center-2.0/icons/*
