@@ -1,0 +1,11 @@
+--- gnome-spell/Makefile.in~	Wed Dec 13 17:16:30 2000
++++ gnome-spell/Makefile.in	Mon Aug 12 01:10:14 2002
+@@ -96,7 +96,7 @@
+ INTLDEPS = @INTLDEPS@
+ INTLLIBS = @INTLLIBS@
+ INTLOBJS = @INTLOBJS@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = @LDFLAGS@ -lgnomeui -lgnomecanvaspixbuf -leel
+ LIBTOOL = @LIBTOOL@
+ LN_S = @LN_S@
+ MAINT = @MAINT@
