@@ -7,6 +7,7 @@ Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-spell/%{name}-%{version}.tar.gz
+Patch0:		%{name}-pspell4.patch
 BuildRequires:	ORBit-devel
 BuildRequires:	bonobo-devel >= 0.28
 BuildRequires:	gnome-libs-devel
@@ -34,6 +35,7 @@ Development resources for gnome-spell.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure
