@@ -5,13 +5,13 @@ Version:	0.4.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-spell/%{name}-%{version}.tar.gz
-BuildRequires:	libtool
-BuildRequires:	automake
-BuildRequires:	autoconf
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-spell/0.4/%{name}-%{version}.tar.gz
 BuildRequires:	ORBit-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	bonobo-devel >= 0.28
 BuildRequires:	gnome-libs-devel
+BuildRequires:	libtool
 BuildRequires:	oaf-devel
 BuildRequires:	pspell-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
