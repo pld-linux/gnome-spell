@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-spell/1.0/%{name}-%{version}.tar.bz2
+# Source0-md5:	532f10d53471fa231c3c3539b340cd76
 Patch0:		%{name}-locale.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
