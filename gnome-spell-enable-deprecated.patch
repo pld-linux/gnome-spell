@@ -1,0 +1,11 @@
+diff -Nru gnome-spell-1.0.5.orig/gnome-spell/Makefile.am gnome-spell-1.0.5/gnome-spell/Makefile.am
+--- gnome-spell-1.0.5.orig/gnome-spell/Makefile.am	2003-07-30 17:39:15.000000000 +0200
++++ gnome-spell-1.0.5/gnome-spell/Makefile.am	2004-04-06 10:28:04.678198080 +0200
+@@ -12,7 +12,6 @@
+         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
+ 	-DGLADE_DATADIR=\"$(gladedir)\"			\
+ 	-DPLUGIN_DIR=\""$(PLUGIN_DIR)"\"		\
+-	-DGTK_DISABLE_DEPRECATED=1			\
+ 	-DASPELL_DICT=\""$(ASPELL_DICT)"\"		\
+ 	$(GNOME_SPELL_CFLAGS)				\
+ 	$(END)
