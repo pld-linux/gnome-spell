@@ -1,0 +1,33 @@
+diff -uNr gnome-spell-0.4.1.orig/Makefile.am gnome-spell-0.4.1/Makefile.am
+--- gnome-spell-0.4.1.orig/Makefile.am	Tue Feb 12 02:29:13 2002
++++ gnome-spell-0.4.1/Makefile.am	Sun Aug 25 10:53:03 2002
+@@ -1,4 +1,4 @@
+-SUBDIRS=po gnome-spell
++SUBDIRS=po gnome-spell
+ 
+ EXTRA_DIST = \
+ 	gnome-spell.spec			\
+diff -uNr gnome-spell-0.4.1.orig/configure.in gnome-spell-0.4.1/configure.in
+--- gnome-spell-0.4.1.orig/configure.in	Tue Feb 12 02:49:21 2002
++++ gnome-spell-0.4.1/configure.in	Sun Aug 25 10:53:27 2002
+@@ -8,9 +8,8 @@
+ AC_CANONICAL_SYSTEM
+ AM_INIT_AUTOMAKE(gnome-spell, 0.4.1)
+ 
+-AM_ACLOCAL_INCLUDE(macros)
+-
+-GNOME_INIT(capplet)
++
++
+ GNOME_COMPILE_WARNINGS
+ 
+ AC_ISC_POSIX
+@@ -24,7 +23,7 @@
+ AM_MAINTAINER_MODE
+ 
+ ALL_LINGUAS="cs es fr lt no pl pt_BR ru sk sv tr zh_TW"
+-AM_GNOME_GETTEXT
++
+ 
+ API_VERSION=0.1
+ AC_DEFINE_UNQUOTED(API_VERSION, "${API_VERSION}")
