@@ -1,19 +1,21 @@
 Summary:	Gnome Spell is GNOME/Bonobo component for spell checking
 Summary(pl):	Gnome Spell to element GNOME/Bonobo do kontroli pisowni
 Name:		gnome-spell
-Version:	0.4.1
+Version:	1.0.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-spell/0.4/%{name}-%{version}.tar.gz
-BuildRequires:	ORBit-devel
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-spell/1.0/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-locale.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	bonobo-devel >= 0.28
-BuildRequires:	gnome-libs-devel
-BuildRequires:	libtool
-BuildRequires:	oaf-devel
 BuildRequires:	pspell-devel
+BuildRequires:	libgnomeui-devel
+BuildRequires:	libbonoboui-devel
+BuildRequires:	libglade2-devel
+BuildRequires:	ORBit2-devel
+BuildRequires:	libbonobo-devel
+BuildRequires:	bonobo-activation-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
@@ -43,9 +45,11 @@ Zasoby dla programistów gnome-spell.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%configure2_13
+%{__autoconf}
+%configure
 %{__make}
 
 %install
@@ -53,15 +57,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/oaf/*
-%{_datadir}/gnome-spell
-%{_datadir}/locale/*/*/*
+%{_libdir}/bonobo/servers/*
+%{_datadir}/control-center-2.0/icons/*
+%{_datadir}/%{name}-%{version}
 
 %files devel
 %defattr(644,root,root,755)
