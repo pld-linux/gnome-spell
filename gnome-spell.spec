@@ -14,7 +14,7 @@ BuildRequires:	bonobo-activation-devel
 BuildRequires:	libglade2-devel
 BuildRequires:	libgnomeui-devel
 BuildRequires:	libtool
-BuildRequires:	pspell-devel
+BuildRequires:	aspell-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
