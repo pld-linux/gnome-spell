@@ -5,8 +5,8 @@ diff -urN gnome-spell-1.0.1.orig/configure.in gnome-spell-1.0.1/configure.in
  dnl Versions
  dnl
  
--GETTEXT_PACKAGE=gnome-spell-1.0.2
+-GETTEXT_PACKAGE=gnome-spell-1.0.3
 +GETTEXT_PACKAGE=gnome-spell
- GNOME_SPELL_RELEASE=1.0.2
+ GNOME_SPELL_RELEASE=1.0.3
  API_VERSION=0.3
  
