@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-spell/1.0/%{name}-%{version}.tar.bz2
 # Source0-md5:	ba4dd33cb150b670756e456066bd7434
+Patch0:		%{name}-enable-deprecated.patch
 BuildRequires:	ORBit2-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -43,6 +44,7 @@ Zasoby dla programistów gnome-spell.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
