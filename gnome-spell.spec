@@ -1,5 +1,5 @@
-Summary:	Gnome Spell is GNOME/Bonobo component for spell checking
-Summary(pl):	Gnome Spell to element GNOME/Bonobo do kontroli pisowni
+Summary:	GNOME Spell is GNOME/Bonobo component for spell checking
+Summary(pl):	GNOME Spell to element GNOME/Bonobo do kontroli pisowni
 Name:		gnome-spell
 Version:	1.0.5
 Release:	1
@@ -18,13 +18,13 @@ BuildRequires:	pspell-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Gnome Spell is GNOME/Bonobo component for spell checking. In current
+GNOME Spell is GNOME/Bonobo component for spell checking. In current
 version it contains GNOME::Spell::Dictionary object, which provides
 spell checking dictionary (see Spell.idl for exact API definition).
 It's based on pspell package.
 
 %description -l pl
-Gnome Spell to element GNOME/Bonobo do kontroli pisowni. W tej wersji
+GNOME Spell to element GNOME/Bonobo do kontroli pisowni. W tej wersji
 zawiera obiekt GNOME::Spell::Dictionary, udostêpniaj±cy s³ownik do
 sprawdzania pisowni (definicja API w Spell.idl). Bazuje na pakiecie
 pspell.
