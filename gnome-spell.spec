@@ -6,7 +6,6 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-spell/%{name}-%{version}.tar.gz
-Patch0:		%{name}-configure.patch
 BuildRequires:	libtool
 BuildRequires:	automake
 BuildRequires:	autoconf
@@ -45,15 +44,9 @@ Zasoby dla programistów gnome-spell.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-rm -f missing
-%{__libtoolize}
-aclocal
-%{__autoconf}
-%{__automake}
-%configure
+%configure2_13
 %{__make}
 
 %install
@@ -68,6 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/oaf/*
+%{_datadir}/gnome-spell
+%{_datadir}/locale/*/*/*
 
 %files devel
 %defattr(644,root,root,755)
