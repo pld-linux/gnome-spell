@@ -2,20 +2,20 @@ Summary:	GNOME Spell is GNOME/Bonobo component for spell checking
 Summary(pl):	GNOME Spell to element GNOME/Bonobo do kontroli pisowni
 Name:		gnome-spell
 Version:	1.0.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-spell/1.0/%{name}-%{version}.tar.bz2
 # Source0-md5:	ba4dd33cb150b670756e456066bd7434
 Patch0:		%{name}-enable-deprecated.patch
+Patch1:		%{name}-locale-names.patch
 BuildRequires:	ORBit2-devel
+BuildRequires:	aspell-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	bonobo-activation-devel
-BuildRequires:	libglade2-devel
+BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel
 BuildRequires:	libtool
-BuildRequires:	aspell-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,7 +34,7 @@ pspell.
 Summary:	Development resources for gnome-spell
 Summary(pl):	Zasoby dla programistów gnome-spell
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Development resources for gnome-spell.
@@ -45,6 +45,9 @@ Zasoby dla programistów gnome-spell.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+
+mv po/{no,nb}.po
 
 %build
 %{__libtoolize}
