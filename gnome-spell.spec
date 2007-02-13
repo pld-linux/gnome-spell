@@ -1,5 +1,5 @@
 Summary:	GNOME Spell is GNOME/Bonobo component for spell checking
-Summary(pl.UTF-8):   GNOME Spell to element GNOME/Bonobo do kontroli pisowni
+Summary(pl.UTF-8):	GNOME Spell to element GNOME/Bonobo do kontroli pisowni
 Name:		gnome-spell
 Version:	1.0.7
 Release:	1
@@ -30,7 +30,7 @@ pspell.
 
 %package devel
 Summary:	Development resources for gnome-spell
-Summary(pl.UTF-8):   Zasoby dla programistów gnome-spell
+Summary(pl.UTF-8):	Zasoby dla programistów gnome-spell
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
