@@ -2,7 +2,7 @@ Summary:	GNOME Spell is GNOME/Bonobo component for spell checking
 Summary(pl.UTF-8):	GNOME Spell to element GNOME/Bonobo do kontroli pisowni
 Name:		gnome-spell
 Version:	1.0.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-spell/1.0/%{name}-%{version}.tar.bz2
@@ -70,6 +70,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/libgnome-spell-component*.*.so
 %{_libdir}/bonobo/servers/*
+%dir %{_datadir}/control-center-2.0
+%dir %{_datadir}/control-center-2.0/icons
 %{_datadir}/control-center-2.0/icons/*
 %{_datadir}/%{name}-%{version}
 
