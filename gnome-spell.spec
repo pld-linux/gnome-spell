@@ -8,12 +8,17 @@ Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-spell/1.0/%{name}-%{version}.tar.bz2
 # Source0-md5:	6ccc46b4e3dc7cb1c6d413358e35d445
 BuildRequires:	ORBit2-devel
+BuildRequires:	aspell
 BuildRequires:	aspell-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	gnome-common
+BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 # sr@Latn vs. sr@latin
 Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
