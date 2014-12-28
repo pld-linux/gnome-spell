@@ -12,7 +12,7 @@ BuildRequires:	aspell
 BuildRequires:	aspell-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-common
 BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0.1
